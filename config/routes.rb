@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
-  resource :profile
+  resources :users do
+    member do
+      resource :profile
+    end
+  end
 end
